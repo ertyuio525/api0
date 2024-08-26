@@ -1,0 +1,121 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encryptor | @SiteVendors | @OriginalAni</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/cybersource.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="top">
+            <div class="logo">
+                <i class="bx bxl-codepen"></i>
+                <span>@SiteVendors</span>
+            </div>
+            <i class="bx bx-menu" id="btn"></i>
+        </div>
+        <div class="user">
+            <img src="p.jpg" alt="me" class="user-img">
+            <div class="u-bold">
+                <!-- <p class="bold">Client B.</p> -->
+                <div class="cont">
+                    <div class="text-container bold">
+                        <span class="text first-text">Hello</span>
+                        <span class="text second-text"></span>
+                    </div>
+                </div>
+
+                <!-- <p>Admin</p> -->
+            </div>
+        </div>
+        <ul>
+            <li>
+                <a href="/">
+                    <i class="bx bx-code"></i>
+                    <span class="nav-item">Encryptions</span>
+                </a>
+                <span class="tooltip">Encryptions</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-analyse'></i>
+                    <span class="nav-item">Usage</span>
+                </a>
+                <span class="tooltip">Usage</span>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="main-content">
+        <div class="container">
+            <h1 id="request-details">Clover Encryptor</h1><br>
+            <p>This is the documentation page for <b>Clover Encryptor</b>.</p><br>
+
+            <div class="section">
+                <h2>Request Details</h2>
+                <div class="code">
+                    <pre><code>
+URL => https://encryption-2yve.onrender.com/vantiv
+METHOD => POST
+
+Content-Type: application/json
+enc-auth: &lt;SECRET TOKEN&gt;
+                </code></pre>
+                </div>
+                <p><strong>Request Payload:</strong></p>
+                <div class="code">
+                    <button class="copy-btn" onclick="copyToClipboard('json-payload')">Copy</button>
+                    <pre><code id="json-payload">
+<span class="brace">{</span>
+    <span class="key">"TA_DEV_KEY"</span><span class="colon">:</span> <span class="string">"rxHJAejXwDpyWwjsMzL7D1WJ/rDCaiqvsiiHZA+8nnVHVD65oWB9HH1O+ONuhhSblWBNKB0YWeA47cS0JisTizZAvXHfRNC2Sp9ZnSQvtA67GKPZsTsvOS2AlrExvYHc7ibwVVvLoz/ByJV/N7w5lBABmu57aFuIa4GEWPfb677dqnv695D1qlbJwTI+BjPk/OPHXuudYG1bi1uE7goqStX/fL6D0joXnzzMzs2ZdUKMAV/zC/kaILlAe5qA1q3aQQfd8h+gkYCskjfOrp38abNCe/DFXceq9qQ3R5YkviCxQAZJBZYzD1FjtTsOG7xIV4uoQLJjHzsJaQLkDdrwYwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAE="</span><span class="brace">, // replace with your Clover <b>TA_DEV_KEY</b></span>
+    <span class="key">"cc"</span><span class="colon">:</span> <span class="string">"4111111111111111"</span><span class="brace">,</span>
+    <span class="key">"mes"</span><span class="colon">:</span> <span class="string">"05"</span><span class="brace">,</span>
+    <span class="key">"ano"</span><span class="colon">:</span> <span class="string">"2026"</span><span class="brace">,</span>
+    <span class="key">"cvv"</span><span class="colon">:</span> <span class="string">"000"</span><span class="brace"></span>
+<span class="brace">}</span>
+                </code></pre>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 id="response-details">Response Details</h2>
+                <p><strong>Response Body:</strong></p>
+                <div class="code">
+                    <button class="copy-btn" onclick="copyToClipboard('json-response')">Copy</button>
+                    <pre><code id="json-response">
+<span class="brace">{</span>
+    <span class="key">"status"</span><span class="colon">:</span> <span class="boolean">true</span><span class="brace">,</span>
+    <span class="key">"cc"</span><span class="colon">:</span> <span class="string">"Zwq2F7XezCM4/5EAH0FVXCzBA6ZwvdcWEo0Oo/O1Mb9w2JmYi+QRbCFCe1AbCf2GgQanrNJHb2Fap7WCccBdaEN6ok6tSmrzoGZmkUqyh9Ll94KtDOdUmZ+a1awlgGbGLAyM22VNyLI86rSi5y1mTBGwBy/jwRqmbqKd51FOCGWz8TWq+tQTiyE7TWjf5Oc46KI6gOxMzc9puhUU8p0vmDaMUQwU3k57zQAxDCMsgfB7ZjgYqKVhkEhT7z6yvYtXQomX71M9yeT6Y9FWhMjcM5HAk6Qcp/MkTx+fUVdxlscQNtK3H0uz7Z09LlHfMG5y+0zMKZw0xGK6KZtZrWisUw=="</span><span class="brace">,</span>
+    <span class="key">"mes"</span><span class="colon">:</span> <span class="string">"pjSCQUJHhoO0Dc0CJ0r5ZyrdrVAJdnyNTR2WeLX80fIU1H+3+1OYFoLckDMWKUcdhZNHqWeUgD1oEvaNh46UzB0n1VCqByPc/HbMLFSZT8OtRSTDT+pAgCjMFQeNEOf4Wo0pzsOXOeGn9+tON3OQbgEcCHk4dN+NuPRhnKzP9y3v4jlhwd9fREYXmTDuMbBKaleQqvzjhLd0f1YK6gFufzJzi2WapwPGpXVhNStyr0MjB8z1MrLn3XgV3A3nzfFlqPadqvTGOWDv6vY9WYT3+tqg+N8BUU7MfTV0bEXPIhYE5oFgu5uZcliTWQB2DPORvrA88WHKgvDmttPK48XRUw=="</span><span class="brace">,</span>
+    <span class="key">"ano"</span><span class="colon">:</span> <span class="string">"fp5V1/nhLWgB8JzSnYzn4eMoOzOdTXdBsy0oMxIRBf/Hd0aoE1Vv4eaOR5QQcNHHXJ3Kt6VgS2QGET2jo6BK9H4qw4hHLx/hy1rJyoZz9Ns6jogzY9B6+HiCCAtvsn9cyFMFjnJrf0hzZ9gnXDkRusPHF5eEVvnZ1DPjBIwCNtSsimDQ4axLYYwcdJyISsLcedIKbBqTw0wYN0PtbbGEgKmui+5oy9FxVmPjgry74jz8xW4nj9NNiCE/3JkJONZFP8cSUpf3gQaRJOOpfkXFjIlHJWxl2BfaYaV7mhWz/GWNZ3OYRiCNR88oyI355R2msDHhCMD2h5T29BrLOwrPqA=="</span><span class="brace">,</span>
+    <span class="key">"cvv"</span><span class="colon">:</span> <span class="string">"nRqB4+WC8v1wYsHkZ6lcGacsteAPQsu6R70WA+VdxeOcPxXJQTnS5ve2KRs6jXAX/FJDYyRdQJnKRj/p1FwSl8b17TkVwPhlfEITynSjq1TZG740vGtp7wOucjBBCZfWOSaqZcsIcwErlNhy5XsJxNg7hlbEoLD1Lg2i9860rfF6JhU/HT0VMQgS2z5rRYDWjHSJCTbVKpA7sy2vddGITNiMGcUilBodmRHC2OnF/qp1MU6oz3FOVyaooSiECIZyNIduQrcAvXKw/EMbapddvm/LHam+XvjHYNiCIetnnnGvTyw9k6PNGtsc3hdsiKBhaLR/qu6wE1XvaC6RvnqlSg=="</span><span class="brace">,</span>
+    <span class="key">"author"</span><span class="colon">:</span> <span class="string">"@OriginalAni"</span>
+<span class="brace">}</span>
+                </code></pre>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 id="additional-info">Additional Information</h2>
+                <p><strong>Author:</strong> @OriginalAni</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+<script>
+    let btn = document.querySelector('#btn')
+    let sidebar = document.querySelector('.sidebar')
+
+    btn.onclick = function () {
+        sidebar.classList.toggle('active');
+    };
+</script>
+<script src="js/script.js"></script>
+
+</html>

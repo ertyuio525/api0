@@ -1,0 +1,118 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encryptor | @SiteVendors | @OriginalAni</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/cybersource.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="top">
+            <div class="logo">
+                <i class="bx bxl-codepen"></i>
+                <span>@SiteVendors</span>
+            </div>
+            <i class="bx bx-menu" id="btn"></i>
+        </div>
+        <div class="user">
+            <img src="p.jpg" alt="me" class="user-img">
+            <div class="u-bold">
+                <!-- <p class="bold">Client B.</p> -->
+                <div class="cont">
+                    <div class="text-container bold">
+                        <span class="text first-text">Hello</span>
+                        <span class="text second-text"></span>
+                    </div>
+                </div>
+
+                <!-- <p>Admin</p> -->
+            </div>
+        </div>
+        <ul>
+            <li>
+                <a href="/">
+                    <i class="bx bx-code"></i>
+                    <span class="nav-item">Encryptions</span>
+                </a>
+                <span class="tooltip">Encryptions</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-analyse'></i>
+                    <span class="nav-item">Usage</span>
+                </a>
+                <span class="tooltip">Usage</span>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="main-content">
+        <div class="container">
+            <h1 id="request-details">Payeezy Encryptor</h1><br>
+            <p>This is the documentation page for <b>Payeezy Encryptor</b>.</p><br>
+
+            <div class="section">
+                <h2>Request Details</h2>
+                <div class="code">
+                    <pre><code>
+URL => https://encryption-2yve.onrender.com/payeezy
+METHOD => POST
+
+Content-Type: application/json
+enc-auth: &lt;SECRET TOKEN&gt;
+                </code></pre>
+                </div>
+                <p><strong>Request Payload:</strong></p>
+                <div class="code">
+                    <button class="copy-btn" onclick="copyToClipboard('json-payload')">Copy</button>
+                    <pre><code id="json-payload">
+<span class="brace">{</span>
+    <span class="key">"pubkey"</span><span class="colon">:</span> <span class="string">"LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS0KTUlJQklqQU5CZ2txaGtpRzl3MEJBUUVGQUFPQ0FROEFNSUlCQ2dLQ0FRRUF1dy93bHZJU2tZNS95VXQwQnBpbQpHb2V6ZldlRzNHZVl5KzlvYzNHL0QyYjd4cGQ4VEtCU0tOTzBPTHhuanFPZFU0eGNIb3kxdHZMakphOWQydndyClBmdGszNktTM01BK1BlbWhrYmFsMXRwSVJFd0V4ZC8xUkg1SUdJRzRhZjFGekFlL1JWM25JckxNd2VxVXRHTDAKUml5bW83czg4R3Zsd2VaclRpaUdZakc0dDhZR1VNZmJkR0tlZGgvMm5YNUQ0ZGx4b3VzbVFmdU1oOXk0aytZMAo1RytaNEJzbTB4eWtMQ2dLclZ2UlVmdEtlNjZ2aFhpdlF1V01NSURmL1BJczhPSzI4clhrWnJVRFRDdnB5Qk9mCkg5UDNOYUNPbXFqckd5aWRMUGNFbWtFc3Q3a3FGNmk5bjBaNzdkMEg4UTc2aXJSZHNaeUVsWWFQcndCR0JqQWsKV1FJREFRQUIKLS0tLS1FTkQgUFVCTElDIEtFWS0tLS0t"</span><span class="brace">,</span>
+    <span class="key">"cc"</span><span class="colon">:</span> <span class="string">"4111111111111111"</span><span class="brace">, // required</span>
+    <span class="key">"mes"</span><span class="colon">:</span> <span class="string">"05"</span><span class="brace">, // required</span>
+    <span class="key">"ano"</span><span class="colon">:</span> <span class="string">"2026"</span><span class="brace">, // required</span>
+    <span class="key">"cvv"</span><span class="colon">:</span> <span class="string">"000"</span><span class="brace"> // required</span>
+<span class="brace">}</span>
+                </code></pre>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 id="response-details">Response Details</h2>
+                <p><strong>Response Body:</strong></p>
+                <div class="code">
+                    <button class="copy-btn" onclick="copyToClipboard('json-response')">Copy</button>
+                    <pre><code id="json-response">
+<span class="brace">{</span>
+    <span class="key">"status"</span><span class="colon">:</span> <span class="boolean">true</span><span class="brace">,</span>
+    <span class="key">"encryptedData"</span><span class="colon">:</span> <span class="string">"AfvIHrcFoGtM4x03itVNcDI72AYV+GNBK16peruJ9WRJ9vK3SjzflZv+S5ZTLoSlTUQ095oi2zG3BSnqURv6M/IbbOMNRMPWpvxTApSN5BPZdlAAzyNBV8zUQ9D6g9oEbYqdPzEmRGZeRT4vDWeD8S3RJouQ34hykQfTImQh6z5L+/2Zu4dHmNA6tYTNPUtTtvQ2NpQfU/olJVu86wUPRV3TpLgT7XNKTZMBXtYgQc00O05fAoQHyBQ/wxdY1UWo3IOvq55FBDt9uhFaPOTjEuIURmXG8jr0FZy5b82ZCqohbsOaDDBAN0oQUEN+dWx/12rx5YeuY4rt7FOdQW3Kvg=="</span><span class="brace">,</span>
+    <span class="key">"author"</span><span class="colon">:</span> <span class="string">"@OriginalAni"</span>
+<span class="brace">}</span>
+                </code></pre>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 id="additional-info">Additional Information</h2>
+                <p><strong>Author:</strong> @OriginalAni</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+<script>
+    let btn = document.querySelector('#btn')
+    let sidebar = document.querySelector('.sidebar')
+
+    btn.onclick = function () {
+        sidebar.classList.toggle('active');
+    };
+</script>
+<script src="js/script.js"></script>
+
+</html>

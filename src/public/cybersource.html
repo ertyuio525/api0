@@ -1,0 +1,121 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encryptor | @SiteVendors | @OriginalAni</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/cybersource.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="top">
+            <div class="logo">
+                <i class="bx bxl-codepen"></i>
+                <span>@SiteVendors</span>
+            </div>
+            <i class="bx bx-menu" id="btn"></i>
+        </div>
+        <div class="user">
+            <img src="p.jpg" alt="me" class="user-img">
+            <div class="u-bold">
+                <!-- <p class="bold">Client B.</p> -->
+                <div class="cont">
+                    <div class="text-container bold">
+                        <span class="text first-text">Hello</span>
+                        <span class="text second-text"></span>
+                    </div>
+                </div>
+
+                <!-- <p>Admin</p> -->
+            </div>
+        </div>
+        <ul>
+            <li>
+                <a href="/">
+                    <i class="bx bx-code"></i>
+                    <span class="nav-item">Encryptions</span>
+                </a>
+                <span class="tooltip">Encryptions</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-analyse'></i>
+                    <span class="nav-item">Usage</span>
+                </a>
+                <span class="tooltip">Usage</span>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="main-content">
+        <div class="container">
+            <h1 id="request-details">Cybersource V1 Encryptor</h1><br>
+            <p>This is the documentation page for <b>Cybersource V1 Encryptor</b>.</p><br>
+
+            <div class="section">
+                <h2>Request Details</h2>
+                <div class="code">
+                    <pre><code>
+URL => https://encryption-2yve.onrender.com/v1
+METHOD => POST
+
+Content-Type: application/json
+enc-auth: &lt;SECRET TOKEN&gt;
+                </code></pre>
+                </div>
+                <p><strong>Request Payload:</strong></p>
+                <div class="code">
+                    <button class="copy-btn" onclick="copyToClipboard('json-payload')">Copy</button>
+                    <pre><code id="json-payload">
+<span class="brace">{</span>
+    <span class="key">"pubkey"</span><span class="colon">:</span> <span class="string">"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyfwCSOZMwTKcMSHQuwx8T6YxfJccrnbEpXijuPqOtDdW5UdfqrRttq+WWNwZCttQOkrum/eKsWVtrHTZOEYosJ/M9qFjgFHAnxcry9MvTmgrOobXoUuWYKV+gZ94kVileobDvbu1GHnS5l9YyVBUQg0Nz1VF7L+wJ9SCTKSE6eEApQgKcyKkixxju5ohKbVvY4D4WdkZC1LxW5FZMW0QbW4SfE8ld2dIM9WirChtIUYF1f99xd6BWQDPWiabCtubz94Sk0q3LkBoFcrFJg4Uhk6vl/jua/x4NmIFsXZ3haIgclML8iaTrkxjaJQdc9HRbcUdq3Xa8VyeS2IBv2WhEQIDAQAB"</span><span class="brace">, // in case replace with your <b>"n"</b> value.</span>
+    <span class="key">"version"</span><span class="colon">:</span> <span class="number">"1"</span><span class="brace">, // if <b>verison 1</b> doesnt work use <b>version 2.</b> in case if its <b>"n"</b> use version <b>n1/n2(if n1 doesnt work)</b></span>
+    <span class="key">"cc"</span><span class="colon">:</span> <span class="string">"0"</span><span class="brace">,</span>
+    <span class="key">"mes"</span><span class="colon">:</span> <span class="string">""</span><span class="brace">,</span>
+    <span class="key">"ano"</span><span class="colon">:</span> <span class="string">"0"</span><span class="brace">,</span>
+    <span class="key">"cvv"</span><span class="colon">:</span> <span class="string">""</span>
+<span class="brace">}</span>
+                </code></pre>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 id="response-details">Response Details</h2>
+                <p><strong>Response Body:</strong></p>
+                <div class="code">
+                    <button class="copy-btn" onclick="copyToClipboard('json-response')">Copy</button>
+                    <pre><code id="json-response">
+<span class="brace">{</span>
+    <span class="key">"status"</span><span class="colon">:</span> <span class="boolean">true</span><span class="brace">,</span>
+    <span class="key">"cc"</span><span class="colon">:</span> <span class="string">"pJE7qEDr9rdt90iXAemWk+7o4JRPMO8t98ez3oEAbdf17lb9P0ofOpnxb5aGJmODDMo26PpZsIurV4OtY6//J8mTPJKsUvAcoHZQZ0sjxuNpv4MJYGpp0OefMAF8Ot++kBabDDuFrsu/Rk8P/q6WEuhI5HOlD59ZL7ET+J6pFNb0gERyPrHqre9HEAv1HTRGFnoe7Ff2ers1XqZhPkYrkJxDusRRWLk5LcMb7PLRvmil6Nakmdl3J+6fKCVm9Mm8yEjBouYTxZHlWpYAwYAkJx1VerycJq3m1hKouQn4n4TBJ8DQbol00Uatglc1Xe2sPebHdtN5K2F2iSbpriokRw=="</span><span class="brace">,</span>
+    <span class="key">"ano"</span><span class="colon">:</span> <span class="string">"oK+Fqg7Fx++9Rn+mAzfvbgm8jflxIKgxtF5h9uwU3IaN7sHL65Pb7xGK+kQf6LWgQgWhGcb6MkeQ3WBUJ0Rfug+x/hFGIOelq1LZ/EPWPb2hA7RrDPNsIKseOd27Bf3wMjE/T0RhbLNWp/OaMrvONzxYoUrtKIJX4gH7dss4EHO4asj2H9midi6VUflzchZDcO+prOQVOJg1ld9nSNGKRHij5D1LV88O+nD0UGluiWLzeYaieLXU+wFJV56SaTshcyoyNl5TPZaae+b4a/NeBGi2Y9Zxsu8QTkvNQlMAAxz8SZaqfDHXGt/UqBdjlw/xj8Y+IGeoUz+5mc0oS35iFg=="</span><span class="brace">,</span>
+    <span class="key">"version"</span><span class="colon">:</span> <span class="number">1</span><span class="brace">,</span>
+    <span class="key">"author"</span><span class="colon">:</span> <span class="string">"@OriginalAni"</span>
+<span class="brace">}</span>
+                </code></pre>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 id="additional-info">Additional Information</h2>
+                <p><strong>Author:</strong> @OriginalAni</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+<script>
+    let btn = document.querySelector('#btn')
+    let sidebar = document.querySelector('.sidebar')
+
+    btn.onclick = function () {
+        sidebar.classList.toggle('active');
+    };
+</script>
+<script src="js/script.js"></script>
+
+</html>

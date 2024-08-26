@@ -1,0 +1,123 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encryptor | @SiteVendors | @OriginalAni</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/cybersource.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="top">
+            <div class="logo">
+                <i class="bx bxl-codepen"></i>
+                <span>@SiteVendors</span>
+            </div>
+            <i class="bx bx-menu" id="btn"></i>
+        </div>
+        <div class="user">
+            <img src="p.jpg" alt="me" class="user-img">
+            <div class="u-bold">
+                <!-- <p class="bold">Client B.</p> -->
+                <div class="cont">
+                    <div class="text-container bold">
+                        <span class="text first-text">Hello</span>
+                        <span class="text second-text"></span>
+                    </div>
+                </div>
+
+                <!-- <p>Admin</p> -->
+            </div>
+        </div>
+        <ul>
+            <li>
+                <a href="/">
+                    <i class="bx bx-code"></i>
+                    <span class="nav-item">Encryptions</span>
+                </a>
+                <span class="tooltip">Encryptions</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-analyse'></i>
+                    <span class="nav-item">Usage</span>
+                </a>
+                <span class="tooltip">Usage</span>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="main-content">
+        <div class="container">
+            <h1 id="request-details">Cybersource V1 Encryptor</h1><br>
+            <p>This is the documentation page for <b>Cybersource V1 Encryptor</b>.</p><br>
+
+            <div class="section">
+                <h2>Request Details</h2>
+                <div class="code">
+                    <pre><code>
+URL => https://encryption-2yve.onrender.com/v1
+METHOD => POST
+
+Content-Type: application/json
+enc-auth: &lt;SECRET TOKEN&gt;
+                </code></pre>
+                </div>
+                <p><strong>Request Payload:</strong></p>
+                <div class="code">
+                    <button class="copy-btn" onclick="copyToClipboard('json-payload')">Copy</button>
+                    <pre><code id="json-payload">
+<span class="brace">{</span>
+    <span class="key">"pubkey"</span><span class="colon">:</span> <span class="string">"jE-Mivn2QSmYXwsI8kmJrBS8Iisg1g3Mmbmyqc2QC7NaJReu7cOPodMjaLlgXIPsIxM_g_oQvCC77E7WnXUGdieFGIcD0bMILESFs0xk567vN6uSeA78AKuO4lKzSsivn0FyyNDedx9sXbgG_I9F0etZbo20FAxg12eM5RPj8NicsG3vj7zoSGnbEFLLICdW_PUXtISza5k1wxto_ac67KQERUNQUqQb3zHTt9Tn7PYKwWg0XH1-DWe3eyndQyljHdoKR_u2PwkRzbx0baUjy3hpm7O4HZlYcyNLXaKS4FpdFEkaquz4vJGA4LfHzJSWYuW1KImadCB201JWHuX1LQ"</span><span class="brace">, // replace with your <b>"n"</b> value.</span>
+    <span class="key">"cc"</span><span class="colon">:</span> <span class="string">"4111111111111111"</span><span class="brace">,</span>
+    <span class="key">"mes"</span><span class="colon">:</span> <span class="string">"05"</span><span class="brace">,</span>
+    <span class="key">"ano"</span><span class="colon">:</span> <span class="string">"2026"</span><span class="brace">,</span>
+    <span class="key">"cvv"</span><span class="colon">:</span> <span class="string">"000"</span>
+    <span class="key">"version"</span><span class="colon">:</span> <span class="string">"n1"</span><span class="brace">, // use <b>n2</b> if n1 doesnt work.</span> 
+<span class="brace">}</span>
+                </code></pre>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 id="response-details">Response Details</h2>
+                <p><strong>Response Body:</strong></p>
+                <div class="code">
+                    <button class="copy-btn" onclick="copyToClipboard('json-response')">Copy</button>
+                    <pre><code id="json-response">
+<span class="brace">{</span>
+    <span class="key">"status"</span><span class="colon">:</span> <span class="boolean">true</span><span class="brace">,</span>
+    <span class="key">"cc"</span><span class="colon">:</span> <span class="string">"U8hR3ojwrb+J83hd0MVILaDT1EXStyf0VDg2nrtjZHCI8I1KCPZTt3Fx/iCU3G8ahlmHZghTTvNiepyjV5ehFIqnMC5cEIz2YKKG2EmfWAXVXA6WWwEas0QTNp5Y7sZu1g1QSVFB5iqNBmK+SJFp6xL1dGYwEJu2k84Klc5D1lNBey5ozAph5QHNS5NqgbU7wYAZcHInUoFSXModuiG7HpHWLuhLKbxGYug5w10SvRfdgvzo3Y9XgMDDAzhROa8CECDPGEkc/SDILd4hScAATgDBhYZ5MdnNnXz93pzT511k5oZMe+Lox/mcp7mnkCa2LfLgx35DR73O1rWx4mFjhQ=="</span><span class="brace">,</span>
+    <span class="key">"mes"</span><span class="colon">:</span> <span class="string">"Tsah2BR7Q2XUSknflFnDwtUqPU3VOLhhR3kSYyhPyWN82xFvh0kAyByFitQhX/cvaXWDlCQEgVsqiN4PwWctK2DFkeGGGZjGk1sNyjZRqI6cIeH/e3ab4mfJMw0moeEems8YSyQGuoei6BrcQgD/DqRaBpFBxmhzaUso0L/904swsra7Z0Koq85DM0UPQPN6XZZjC6A+D7fx99FPxcLm2zdYBJhH3UWrh3vpkqeAnNcPb92gmUbvhanSyssEMhGnj1igKFp1iHsaWHO4kw0KcEnXlhlbp7i0bmiAQxh+C6KD3tW2ai5SwXwTAMfxqSPaupNI4MAU7UUnl8nq2bfeNw=="</span><span class="brace">,</span>
+    <span class="key">"ano"</span><span class="colon">:</span> <span class="string">"Ql5nxsEVk2/tug9P7WsCCJIqBudA1ZLqGCAvC+dDcAXbu6F++lkT4l9Ylpvp5gPVQ/+QxZTKGUJkcssgKpWyf8lAuJHx1FXKDFo7mVaBRjiFTz/Hhs2U4cpgORobiIPbdAmh0TkSmx74k1EIjweI7z6SE1zF0QzZgFzb+GMXRx6gJxRMazK4jaUbbAOAmkneMngs3rZ9PkZ/fA8VH9jTSuSe6P7s7qVetLAmFX/2AJe61RX7Iqh/3zllRBnfvRHGGfXD/RZHToCkqyFAIGOBmtmew298aukT1vvVNQBBQ9HHp6f49X49+bpJGrOIo9DC3nBM/e0YQwWa666QRKQ0Zw=="</span><span class="brace">,</span>
+    <span class="key">"cvv"</span><span class="colon">:</span> <span class="string">"S0jT55yJ583GAAsHTEgyBBnCUvbWVppY4PhxwLsuREo0mndxCsnn3xMFQi2uR/DXk7GNYVwJuXKwd58ZIoSA8I1YcwcqMHV525NsoOT4Az0q/JR7CU6hdydKLJWxBG8F+eNaYeI7XWoVOOgRswO62AoPJ/vR7+3u+ktu3R11StUeMcPx+GEr4hg/Bwt8J7KOVexA0L+kH9P0g9BKLhZbxr6bYapR5R5QLQOJmWcpQuTsiPgkZH9cnNp2S7tEvhwP+BHeeVUL129Hd6rPkBD7tSpW3rfU33vJ5GgQWJtyI+6RyasHq/e3RO5ExD2zUC4rCGdfVFSODcfWtYL1slwHCg=="</span><span class="brace">,</span>
+    <span class="key">"version"</span><span class="colon">:</span> <span class="string">"n1"</span><span class="brace">,</span>
+    <span class="key">"author"</span><span class="colon">:</span> <span class="string">"@OriginalAni"</span>
+<span class="brace">}</span>
+                </code></pre>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 id="additional-info">Additional Information</h2>
+                <p><strong>Author:</strong> @OriginalAni</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+<script>
+    let btn = document.querySelector('#btn')
+    let sidebar = document.querySelector('.sidebar')
+
+    btn.onclick = function () {
+        sidebar.classList.toggle('active');
+    };
+</script>
+<script src="js/script.js"></script>
+
+</html>

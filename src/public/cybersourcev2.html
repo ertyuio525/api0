@@ -1,0 +1,118 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encryptor | @SiteVendors | @OriginalAni</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/cybersource.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="top">
+            <div class="logo">
+                <i class="bx bxl-codepen"></i>
+                <span>@SiteVendors</span>
+            </div>
+            <i class="bx bx-menu" id="btn"></i>
+        </div>
+        <div class="user">
+            <img src="p.jpg" alt="me" class="user-img">
+            <div class="u-bold">
+                <!-- <p class="bold">Client B.</p> -->
+                <div class="cont">
+                    <div class="text-container bold">
+                        <span class="text first-text">Hello</span>
+                        <span class="text second-text"></span>
+                    </div>
+                </div>
+
+                <!-- <p>Admin</p> -->
+            </div>
+        </div>
+        <ul>
+            <li>
+                <a href="/">
+                    <i class="bx bx-code"></i>
+                    <span class="nav-item">Encryptions</span>
+                </a>
+                <span class="tooltip">Encryptions</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-analyse'></i>
+                    <span class="nav-item">Usage</span>
+                </a>
+                <span class="tooltip">Usage</span>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="main-content">
+        <div class="container">
+            <h1 id="request-details">Cybersource V2 Encryptor</h1><br>
+            <p>This is the documentation page for <b>Cybersource V2 Encryptor</b>.</p><br>
+
+            <div class="section">
+                <h2>Request Details</h2>
+                <div class="code">
+                    <pre><code>
+URL => https://encryption-2yve.onrender.com/v2
+METHOD => POST
+
+Content-Type: application/json
+enc-auth: &lt;SECRET TOKEN&gt;
+                </code></pre>
+                </div>
+                <p><strong>Request Payload:</strong></p>
+                <div class="code">
+                    <button class="copy-btn" onclick="copyToClipboard('json-payload')">Copy</button>
+                    <pre><code id="json-payload">
+<span class="brace">{</span>
+    <span class="key">"pubkey"</span><span class="colon">:</span> <span class="string">"eyJraWQiOiJsbiIsImFsZyI6IlJTMjU2In0.eyJmbHgiOnsicGF0aCI6Ii9mbGV4L3YyL3Rva2VucyIsImRhdGEiOiJvNjV0RUdVK216QlB1TFdjdDJUbzRoQUFFUGNMMmN6TmVFc1lkWkJyRUFCWkNkMGRQZ2RRMUlpN0NIRWxtakI1WjdDQVJuZE12L3pZMklpeUErRzYxUk5nbHlsV25EM0E1akJVdVFYM1RFbmV1UmFBT1lqaVVPMkhZRk9aWG5xYkZsNlgiLCJvcmlnaW4iOiJodHRwczovL2ZsZXguY3liZXJzb3VyY2UuY29tIiwiandrIjp7Imt0eSI6IlJTQSIsImUiOiJBUUFCIiwidXNlIjoiZW5jIiwibiI6InY5RWZfSG42TTVhUExIOXcwVFlZTnczVFZhcW1SOWJwLTR2bGdwejdlMUlmeTREZ09VRF9ZVDNXaWVFdmJjdGRQcWdEc201QmwwNHkyZkFwa1JKZEYxWUhBQXdkb3duZ1dRMW1xU3RLTFNObExIU1JBUzN3dTBaNnlBZTNCRUxHNHhueWNIOEdaYmF5bmtpQmtRTElpaDZTRTdMZWhpQ1FjT1gzMldSUGs1OXQzejliVEV6TVBoMlV2WUowYmEyU1pJcW1DRVEtUkN0OEt6TzJEWHhNSVFaSHpIelc2YjlFeE9OLXpBQUF2TjVCeF9SOEhiX0lzV1R4Zi16SUJYMmdhMzI2SEYzMVJjdThfeHpMVW5kcGR6amo0N3Flc1I2cHdsYXpvMkNfMS1fdlNUR3huWnd1OXlBcUZ1VkFwMFdST0dJLWEzejZGem92ZFRPOVBvbXFOdyIsImtpZCI6IjAzd0RWckJyeXdnOEIwSFhmVmx4ZjF2azgzRUhjdEJmIn19LCJjdHgiOlt7ImRhdGEiOnsidGFyZ2V0T3JpZ2lucyI6WyJodHRwczovL3d3dy5wb2tlbW9uY2VudGVyLmNvbSIsImh0dHBzOi8vdGVzdC5wb2tlbW9uY2VudGVyLmNvbSIsImh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCJdLCJtZk9yaWdpbiI6Imh0dHBzOi8vZmxleC5jeWJlcnNvdXJjZS5jb20ifSwidHlwZSI6Im1mLTAuMTEuMCJ9XSwiaXNzIjoiRmxleCBBUEkiLCJleHAiOjE2MDQ2OTI3NTQsImlhdCI6MTYwNDY5MTg1NCwianRpIjoiTUhIc1B2RXNleDhHZWZjRSJ9.C1ED5bRUfstLixKkFatiX0HriBC5YpoAgd8j_02CNpzDap_ED-BTN_yuqCT26FIh8CX9-TqbxPyc2lrkEO5vqpftmN123R0CWvRLPk4ujGr5Mt1iSYl9ZrzBw5aPF7QKeFWmS0zdHqQcX9CKsKxCeYlZi2ObVJmUGMHlQ1ArgbOvYdUJsxhjDT2NG-_VPtrpsSfE48RZRuGGvNr5J1VGqb83t7ftA2Fh1H-gj9gujr_rFwYJy4mGOJSe87YTg1TAHaxQab56OMWkXzWM17V-2oZsA2g-y-btw9t_v6mL9Kj2KTaFK1fsSj5uPV61ISP89pc4nmpOknHgqAxzHriIqA"</span><span class="brace">,</span>
+    <span class="key">"cc"</span><span class="colon">:</span> <span class="string">"4111111111111111"</span><span class="brace">,</span>
+    <span class="key">"mes"</span><span class="colon">:</span> <span class="string">"05"</span><span class="brace">,</span>
+    <span class="key">"ano"</span><span class="colon">:</span> <span class="string">"2026"</span><span class="brace">,</span>
+    <span class="key">"cvv"</span><span class="colon">:</span> <span class="string">"000"</span>
+<span class="brace">}</span>
+                </code></pre>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 id="response-details">Response Details</h2>
+                <p><strong>Response Body:</strong></p>
+                <div class="code">
+                    <button class="copy-btn" onclick="copyToClipboard('json-response')">Copy</button>
+                    <pre><code id="json-response">
+<span class="brace">{</span>
+    <span class="key">"status"</span><span class="colon">:</span> <span class="boolean">true</span><span class="brace">,</span>
+    <span class="key">"encryptedData"</span><span class="colon">:</span> <span class="string">"eyJraWQiOiIwM3dEVnJCcnl3ZzhCMEhYZlZseGYxdms4M0VIY3RCZiIsImFsZyI6IlJTQS1PQUVQIiwiZW5jIjoiQTI1NkdDTSJ9.CMOLwqwpwr4xwposw5Yvw7HDiMKmaMOGekPDtsONw4ojw58HZUY-Gh3CjsOabMK2XcKQw7zCtRPCm8KUND9bwq_Dv8Kmw5jDolQePsKfw64qw6DClsOrwr46fiEuw6hCchvCvcObfVnChsOHHMO0wrQZFcKwwoBJJ8Oswo9ZYcKhwqbCnUHCkzPDuUPCrwLCn8O9JnV2w57DuxbCuHYHCxYowrYsPT7DtcOGQThtKTXCty_CoMKeEcOBwrTClDPDkMOlwonCvsKAwoJhTgcCwoTDiwfCs0EFC8K-fUHDiw8lwpLCvsKXU8O9bQVNwqUowrJiPTzChcOxB1bClcK4FcOrwoQuwqpmSsObwq0Yw7fDpsOQIEfChsKNcMK9wqXDgcOMLwBiBCEVH17DgSNNw7TDikrCgjRvMQjDocOEe8KmIsK3RETDsw7DoyvDqAXDicKkf2xHwo_Du1tmwoxgUsO7WMKlHXg0VxVYw7XChFDCmsOww6nCiMKxwrw.woTCrcKNw5LDocO0HTPDmcK_wqvCrg.wqzDhUINEQLCv8KrwqYIw4HCnnAAb8KFdMOIHcO8w4ApPcOyISwiwot2w4_CmsKwwqHDqsKZw7XCmsKYNxxsQTTCsnYVWjnDgMKdcsKRw7LDnBRkwpMgwoUyLcOiF8O3w6ZvNWDDr8KTWCRTLG3CvB_DsAd5K8OgM1Qwwo8Twr3DiMK1CBPDrSDCsBQKwqBRfsOqw6J6wpTCoArCp8OsY0fDiiBmSMOtw5QBw5bDhsKwFRFrwp4MCsK5Q8Onc8OZwo7DvMK7J8KuwrnDs2RGwrrDp8ORYEDCocKXRwjDicKoEGAKw4luwq4GwpN4w5rDh0HDtMKvMcO9w4xKfsKgaxnCqH_DkjXDosKUMjcle1s1w680DcOjwqhSeSLCn8OkBA_CnWcBI8OhwrzDpsKxwqXDomIFwrLCjWUZDMOZw4bDtg_Ds8OMdT8edcOZw6PCk8OPAEbDicOYw7XCrgrDpcOAwqXDusO7w7JqZ39RBMKtwrTDrcOebmZ3woHDgS7ClVzDjTvCmcK3wrbDpMOAw6vCiCzCiMKmwqXCpHNZw4V9w7bCm08_AQ81PBzDnznCqsO3wqnDjsKtwrpqCn7CoQfCn8OBVWnDg8OjM8KDO2wbw4fDlMK7dH3CsMK6NXjDiXPDssOmZsKEw5pCUyh2ciMJACtRw6jDr8KAwq4gwoHCulvClF_DmcK4wqU7IsK0a8Oad8OTwq06YsK_wqXCphU3ccOlw6Ilw58XOGpdw6TDnDoew4_CmxbDscK-IsKcYcOuw4xCbsOow5oEAcOwFsO2Q8KFKMKCw6jDicKZa8K9w53CqcOHw4PDnMK0w4vDugdEwoYCRSXChsOXw7LCgHhIdcK8wrXCvm3CqsOTwqXClcKCM1sCVMKyWHEywobChcOgwrvDj8KAAMOJAArDlcK_VcOJJA8SKcOMwogEwqTClS4dPMOSw5HDqMO0wr8RWsKBw7HChMKNw7XDqcOaNn3DoCHCinsHw5vDt1lCOsOlw4rDnA_CrcOqMMKDX8OxRMOBDxDCqjMEBMK6w6jDumEfJF0zw7QCwrAzw43DtsOSShA2RGFuw5jCmcKmXwHCmsKLZDBIwpPDkADCl8KPw7_Cu8K1w4nDgA1WwrLCp8KOwobCi8O5GGQ9w78TSEzCssOXwrXDsMKzW8KMw60Pw7LDtwjDih0dw7p_wpDDu8K0acKHX8K3wqcXOhXClMO0ccKhBMOHwoHCixXDu8KDw4l0BAoDWMKbLcOFJcKcSMK9w7ZNwo9kOcO0JQbDi8OvwoQ1ZQN8ZUNfQBjChG0cwrwQUMOvJHPDq8Ofw4TDusOUEsKKMEUww5HDo8Kcw55pw5nDuMKKIDLDn8KVISvDjcKva0LChsKLMjHCrxYzw6HCmMKYEV_CojHDqcOswrjCicK2woRRSAXCucKLXcOcw5s7wpfDgy7CuU1oHnpzw64RFcOIIMK3w4_DrMOoXMKdQEnChEHDmsOcwoBuw4tfQMKRw6oMw6HChsOCb8KKaMOAwoPDiDwRcsKuw7R3wp7DgMKywoLDlEbDkWhfYcO2EXVMJMKfw6XClCrDl8OIdMO1YMKYZsOAZcOWwpNGw5ABG8Oew7EfZcKwbR3CtsK0wqDCsDLDpC7DkcOWw77DuAgVUVDCk8Oyw6PDsz7CsSYZwpLClsKvBXPCncO9w4tSwqzCqcKqYsOuwogfUyLDmcKiw5kOMMOGw7YWw5TCuHPCt8OCw59TD8Ojw5XCmsOlwoZ6w41VwrcDwpNNwr7Do1Y3QC_Ct8OVwps4N8KhJcOsVy0MIg3CnW_CgsKBXQVnw4HCsjvDrsKHTD18w6XDilvDp0LDkGtlwrZXWMO5w6LDsDLCpH0VJMOYFmQxRAcAFkEBwrnDhE0cT8OmwrfCm8O2w4gjwp8Jw7IZPMKpa3N7TsObTQ58BMOLw6DCnsKGwpDDosOPFcOfw495w5bDosKAOVsTKAQ4McOtwo8pw7tGwoHDgMKQMHMcJcOOw61Fw7ROHsKNwqliw7jDl8OPw6ZfcMKIN8KMw6PDusKbw7sNwoIRw6Now6nCsMO0w5dJKAUAKcKCw7HDnMKnVsKBeCjDiX3CgknDvsK9DcOSW8KLw7nCp8O3w4fCksOEOMKYbh4THRc5Ch1ww7g1wpzCl8OmwoXDmsKLdkzDj8Odw6ANYRDDiihpwps1wrXCr8OYwojCi8KmBsKfw7LDvA3DlT7ClELCicOzw7fDiWrCt1ULCFJKw5Q0M8OFDMOMeFrDnWVRM8OJw6wsdkFOwqtuw7zDl8O7woHCucKMwpwQZVAOwphvw6RrPDkZZjnCgMOuw5_Dr1wOw5FcPcOTIcKXCRjCuHwxXsKGwr7Cr8Ovw4vCmlLCtUTDlcOqw7MIfHvDn1snXsO-XcK5w4RqfDMXw6d5w45TC8K1EmEfwpXDlcOKA8OCRMKVYsOxNTrDtsOrwrkew6PCgUjCjVVnCGrDqcOrUsO-Fnl5QMKbwpoyCcOjw5AxwrnDt8KhwqFsWsO7VhhkIUPCgMOAwoBsL8OBwrY8TMKyGcOTb2rChwhVHQPDoMKQw4RkwpXCmcOYCwlOS8K8SzLDrMKew4hmwrQTRMKpH8Oyc1NCUFhyUFFQwq_CqMOxQWXCugYtw5DCkMO2w4TCgXRZwpLDqsKuw7E7w5cXDcOKD8OkVDXCi8KtUsKQwqBLUMOEJMK_w7HCuwY5wosAfT1Hw7TDg8KrdGfClMKfQwzCmMOEw4_Dhm0rwp1fdARPwqxJwrFTw5ZrwpbDo2NewrnCiw3Cr1ZACcOZw4IRw5DCpcKOPCTDnhvDnwkrYRzCicKdw7c7O0jDscOiwqfChQzDrcKpw5IDwqDDj8KYJXEXw6wiw7MNSns4wrE6w74Mw73DucOpwrjCjwnCtx3DvcKqZVnCjndqAGlwOypdQ3DCl8OrDXXDgg3CnQrDjMODaBbCm8K0VjdZAi7DisKcAMKqHMOKRcKzw4gNOsODUMKRW8KHMsOzAQVCw4vDi2fDrsKXBcO8WMKYw4wVEMOIwrAaw5bCjMKzJBRaMzfCu0jDtcKhMsOLVVhCwq5Yw4bDjMOVw7HDvcOIc8Ofw5fDqQk1w57CsjMBeC0EwpkDEMKeZjrCicOoBcOJL3gJV8K0w7VIwpsVW0AXGQwxw7o6w7YnXwxDEMKBBMOkFRZ3V8ONKndWwpnDi8O6w4bDl8OaQmE4Xj9ITMK_LEbCocO5woNKLsKxw7_DsR4mZsOkwrLDhsKVw5PDtyMywo9wMBh_w5DDuhJ9CcKkw78sDsOhH0UjUsOUw6jDgsODwqXDuW7CtcOKw448wqbDlcK7woIlJ8KQMsOtw7dHYsOLfGjChXTCq23CrQh1JDzDhcONwrc-Z8Oew5jCq1DDmcK_Xz8YIMKYwqPCs0vCqTnCrsKyBBIeQcKjKMOIw6hWRsKIG8OiwoTDl1bDgzNTwqJMCRjCq8Ouw4XDv8KJwonCngEYwpBVw73DqQ.XR_DkQl6VXzCvMOXwp3CvAfCnzovw58"</span><span class="brace">,</span>
+    <span class="key">"author"</span><span class="colon">:</span> <span class="string">"@OriginalAni"</span>
+<span class="brace">}</span>
+                </code></pre>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 id="additional-info">Additional Information</h2>
+                <p><strong>Author:</strong> @OriginalAni</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+<script>
+    let btn = document.querySelector('#btn')
+    let sidebar = document.querySelector('.sidebar')
+
+    btn.onclick = function () {
+        sidebar.classList.toggle('active');
+    };
+</script>
+<script src="js/script.js"></script>
+
+</html>

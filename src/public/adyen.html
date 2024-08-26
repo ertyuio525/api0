@@ -1,0 +1,126 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encryptor | @SiteVendors | @OriginalAni</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/cybersource.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="top">
+            <div class="logo">
+                <i class="bx bxl-codepen"></i>
+                <span>@SiteVendors</span>
+            </div>
+            <i class="bx bx-menu" id="btn"></i>
+        </div>
+        <div class="user">
+            <img src="p.jpg" alt="me" class="user-img">
+            <div class="u-bold">
+                <!-- <p class="bold">Client B.</p> -->
+                <div class="cont">
+                    <div class="text-container bold">
+                        <span class="text first-text">Hello</span>
+                        <span class="text second-text"></span>
+                    </div>
+                </div>
+
+                <!-- <p>Admin</p> -->
+            </div>
+        </div>
+        <ul>
+            <li>
+                <a href="/">
+                    <i class="bx bx-code"></i>
+                    <span class="nav-item">Encryptions</span>
+                </a>
+                <span class="tooltip">Encryptions</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-analyse'></i>
+                    <span class="nav-item">Usage</span>
+                </a>
+                <span class="tooltip">Usage</span>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="main-content">
+        <div class="container">
+            <h1 id="request-details">Adyen Encryptor</h1><br>
+            <p>This is the documentation page for <b>Adyen Encryptor</b>.</p><br>
+
+            <div class="section">
+                <h2>Request Details</h2>
+                <div class="code">
+                    <pre><code>
+URL => https://encryption-2yve.onrender.com/adyen
+METHOD => POST
+
+Content-Type: application/json
+enc-auth: &lt;SECRET TOKEN&gt;
+
+# Note :> versions are [ 25 , v2 , v4] <b>You must specify the version in payload.</b>
+                </code></pre>
+                </div>
+                <p><strong>Request Payload:</strong></p>
+                <div class="code">
+                    <button class="copy-btn" onclick="copyToClipboard('json-payload')">Copy</button>
+                    <pre><code id="json-payload">
+<span class="brace">{</span>
+    <span class="key">"adyenkey"</span><span class="colon">:</span> <span class="string">"10001|E9299A45B34AE878855F3E66136B461664F519E85F36E59B505CD6590311FE96BAF50830BED460FE6EB8AD39B3E4BFCF5028A33A64C518E3BC13F23E49CE9C68B13A3ED9BB9233C166A7572755E62CB67AAF7A6AFC1070CAD7FF3F6FD8C070168FC6ED31E81F3DE10A93D6A9494F9D24900F1499D95264E66E3DC357B4628E02A6DF0ED37196539309AB0B1EA7EEB2BD67452B16289452D617C687867981C3570E0C43C51EB273154011D53F09B2B2E1AAD41B13B686A861D2C095DFEA258AD589AE482CAF9B05EFFF1C16EF182D67CA459B6EBD00E63F170307B56237A6C8AE593EFAD9E58AEC7D560B41B3412DD7D5E64B76BFEF75354DC52BD2138B77F279"</span><span class="brace">, // replace with your adyen key</span>
+    <span class="key">"card"</span><span class="colon">:</span> <span class="string">"4111111111111111"</span><span class="brace">,</span>
+    <span class="key">"month"</span><span class="colon">:</span> <span class="string">"05"</span><span class="brace">,</span>
+    <span class="key">"year"</span><span class="colon">:</span> <span class="string">"2026"</span><span class="brace">,</span>
+    <span class="key">"cvv"</span><span class="colon">:</span> <span class="string">"000"</span><span class="brace">,</span>
+    <span class="key">"version"</span><span class="colon">:</span> <span class="string">"v4"</span><span class="brace"></span>
+<span class="brace">}</span>
+                </code></pre>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 id="response-details">Response Details</h2>
+                <p><strong>Response Body:</strong></p>
+                <div class="code">
+                    <button class="copy-btn" onclick="copyToClipboard('json-response')">Copy</button>
+                    <pre><code id="json-response">
+<span class="brace">{</span>
+    <span class="key">"status"</span><span class="colon">:</span> <span class="boolean">true</span><span class="brace">,</span>
+    <span class="key">"encryptedCardNumber"</span><span class="colon">:</span> <span class="string">"eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZDQkMtSFM1MTIiLCJ2ZXJzaW9uIjoiMSJ9.UUa7F2MYJC_5291i-BCmzazLhYkXNXcvsuZMJwU9wpaQlFIvPecv_K2_-bWf1_l7j8Du2ZSHGmCViqBpIV6_FFOaLLBrtLs8b_eljmgqfrUyURfckgb5bMK6WshrwsudPaRN9-zXnjGCbzewP_VzEmaYB1nbQ7rxCZ2li7k7sV6ZMjrdIkGHTIozunHf3_k_mbvFgVjRG-xoEPbXUrjJkaBSvUXTPHo3Wf0CtWbZYqcPn6J2fV3_6gMgjLXSHuOfrSGmV2_pqZJ9MTX2JsZuGN2VkRlrI9qRAZKSMn0glLo51ZirSHyoh2W_REd320mCwJ-iiWjN0YPErRE4AyX8yQ.MU-oD-dXFxJvxj2H9Yu1eQ.wKnTnlFv7X2fNu6JhPdq5AS4s0LGktlf7wJYncU2Ndb_ApEV0mKMdf4smVnMblssLiEEXkEs-tmEAf4cxP4D5HIIqg4vJzO9GJSksU09J8aZNQR0KT5dLu9mlTBtj__67zFW35SEXt-5VEIHAp4D4edHkBZfpwpQSqvA1M7v7tdRBoGzNI8HJnPhxZgeOQkkIkTt1Jzi3r1aYpEzMHDc0TfNMZGgTWX4yo-Onkz1WblTomrSgCoCB-nR--QTyZhu65KhEG4hJkrRvrqfUC0J7HrdesAhJiEAQk7o1yIlUJxQoJPinNktR3xxi9S5-NdMZmpiE-d-CkiyyYyeScfkgf9oWunDkbHQPoG9-i2owZ4KDiSUZ1JcKx3EAbWDbzNtoF4nnHigmFPTjlHC4Go_ksrC7WtI6r5wwuvywCZ9fPdYww4rKJURJxJuVOfPsi4Luaedy6-Zy2WlFGoP-Qbn3Wfw2tVFaZIQfT0sA1XguTEprb2BeKFvqvQWbSrpyNyFpBrH-sQgEDHp4dkPjNexsPRA-zEiLMZpSrHqHnwOtSnGlqOcGC77kJhHXqJvX66vpItzbsfOepDZwXGtXTq7tBQVveljoQF9_-tVuZpG3pxM0i69X0CAtSlmIQTgK7YRJlBOgzc-ji608mKfXNWCCSuz1-isAhqvWD_wIApX_y0EHSskDj-fp3bD5EewQloP1NwQl3-g36xGSLK1RwXN3kZkpyPIFOqPkBLX5cP49PT6PS8QyhVeMvbcq7vSqxSAyucE4tK7pkceoGCo1hl7D7HynSRgz8cgpkhpJ4UI1YevNztHY8zrx5LmDFc-cBSl.ibfXR2dxvZwEjriJcaEZu-nKgxgb0D0Vb1gyK2zIzkI"</span><span class="brace">,</span>
+    <span class="key">"encryptedExpiryMonth"</span><span class="colon">:</span> <span class="string">"eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZDQkMtSFM1MTIiLCJ2ZXJzaW9uIjoiMSJ9.DI3cx9hGb14CZqrqu_Flery6m2lgWEytRcZqhD8mW51beQmN2Tga4L9HeQExq-1znjupfe7rIDH5nVtgXbU08VXXNPNbSfBuktHKTlCXHX61NIy6iPhgZf_T41p595uccc-uP5ks0yKE5wf8_A_X4rsPEJoExr0atKnxakT3Y00J2tvnZtsBHWr-Z4GTesD8_c4ruHV5uGuJGe-R58ttKwSgVlKrMSBztCZ7VCpGpWti53PzFr23gTZOEGLrkhTaSUW4p0V5B7pI78yhBjtvtj1o-6PIo-6nmzJQH0ZPrh0liL-XpO1BakpuAzDCWYo4K4xx-TNYQ9w2Ng3MlnHmWg.YPmtIjwenDfghpIrXH4Pdg.Nh_mYY4h1RyH8ZjjGxsf_uRInhIQH9SepUDd7BSEwQzr9jk4Usq-mk7wM7Vsr0TTf0jhM81rQ9lnJzVUOdRkkBAT6X8Mqag_sORd5eZunGA._yaHWnelAIuP82abN_Fj6OwkMMYo7k6kIhYC5S-Pi44"</span><span class="brace">,</span>
+    <span class="key">"encryptedExpiryYear"</span><span class="colon">:</span> <span class="string">"eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZDQkMtSFM1MTIiLCJ2ZXJzaW9uIjoiMSJ9.tFJIMCEb0JbOif06WzU9esldlW9tAutq1GW_5YUS5AnEd6Q3XExawf-hxYuYPdqitp5f3jN4Gb75UlUi6Tr9OsiNSb6x7zXsgSWT8CxOXfHE9mC6r2qfQlshUlf-Sl_BjDS0AGuLBxCl_jeCZEGJex3lkKMxeQUC2VvgOZCpl7iD5a77o8LPsSND9eORMGQvIFAy2I4DBlT9fEkBo-kt1C9dv4ANUBrVG2puHNRfRUBt8f7YMhswp9zV_CPBcGk2Zg9vVbD1xofMI3t3sOibfUqUIGLheDQDiq50nrVn0rp7qdKA7XLCIojgbfXesU6FjmPTT0BRXAaaBr8Ine1f2A.wjwgKuUB4g_VcFsR97ezQw.yAyg3ZOtG_uEABKp3lBjRBABn2Vmx6NiirGDxiZPcpv6U_MIfBG7q1cW_quFyV6MEzS0DWDW97qqSZ6zQNKATE85_dHREul3fTtSc6hTYcY.etS92cZuBeoTsN1EzAx4amA1REaNtd_0cpgq-mnTPhQ"</span><span class="brace">,</span>
+    <span class="key">"encryptedSecurityCode"</span><span class="colon">:</span> <span class="string">"eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZDQkMtSFM1MTIiLCJ2ZXJzaW9uIjoiMSJ9.gLBtZfDofzIi-78KY4lYOZWtac2E3fSsvWBuJ0zCoOOFOm35jjCyxsDiIs0prJNW7SGUIf5AbwFx2IxzdoqcA9AT5akFKA7qzrBl9sAGRm5I_kWOItWM6mujCMievooM7iMncYUq4EDFr1GjfmXJ_iSBneIw_07uWCwdEFaq2vdkLH_xcgAmHvKBbDgoMekg-Z9y9hcpzz3EI5ya37g1cjHPmqVOf7SiGYFh4RxozSowzjTri6bPrGYdId4MfnEacELjQwTLaIYc95iZLr5MWN-14sXusKO2XKEseDYhVJbt74hzYoWTf6LrwuNeCpx3q3A2ZiFBZNudvjGw97FOtw.iXrYDo449TpXeFRwSERbOw.JHJP4FBqON2gYZdzZdnKi6yzq3epgmqlBye-FQHqiW9AKgdumPiq4Omz6zzHN9nAkuZKWtwT5O_2mje0Je8lKLkV3uXyhfDpS5gykX6RM3y_8kl4l9VYG7lbN5vEzpGWWOYQ0YC5HQVzZJ5eYlLqqi_rJAYBaiqAorFcYTZnIYpjP32rJU3BD_eZwhrtwaz7BoObXpQqRVyAYuJVILG5CfZsx1sYo3328cmXIjbT0NdDLFmamL_21X0qn1iZHuKGUBaOHIuPu1HacQ5k1NSLIQyCU5wkGXulvBISI9OmnBkVmfYl2O0-gKqKkcMy8_u2m0Ptkfw-dqqDj1__ILWU-gtSDMehP51L91UyTILCVGrBImKSfYaYweTracuETcLCD_ZRcdng7Qs_iNfEoK6yj0EqiiXu36nJiYhfqgREusFqqenXDn6jAXgn8eBz61oNSIJ9sIqJdnUULK1YLnwUvkQ5EtjJSmocSwRJU0JRz0Nuesi3FEyr5TleHhTKfEFj26VfvAdHjHcnifxxbTBlV76S0dOCDBv24ASCtVSCkJvMf_4tZrhxJyCYX5uy5k1JVOnjDBP9axuzCHDyp078TwJRtPKTBeLp-W6uiA3g10gLwsCKoK4uRe-MxgawaBMWrYUeDrVrpxhz24xOrDNB11tnttWiANiXp5VemigpgeVqeH7bmH6V5HfFq73Lh3Lk9rZNH-nybG0cRB7ht1OYsRs8DRtKlZ3h-GE8PWASCK69cIntvh-qy903OyMXoChWnWWDo4-XPzFiNeUQN2OSSQ.koVH0GuyrCdSk8Jd3bPkR-nTcQQMky8egjIRG-6vonI"</span><span class="brace">,</span>
+    <span class="key">"riskData"</span><span class="colon">:</span> <span class="string">"eyJ2ZXJzaW9uIjoiMS4wLjAiLCJkZXZpY2VGaW5nZXJwcmludCI6IkRwcXdVNHpFZE4wMDUwMDAwMDAwMDAwMDAwUUdlTjUxS05lYTAwMDU2OTg3NzY1V3BZV2lLekJHUWJSVGlNa1ZIRFZHZm0zSlFEemcwMDJjRzNCZG5YVm1mMDAwMDBZVnhFcjAwMDAwOGJjSXU2RkRIT1ZRQ1U0UnBoa1g6NDAiLCJwZXJzaXN0ZW50Q29va2llIjpbXSwiY29tcG9uZW50cyI6eyJ1c2VyQWdlbnQiOiI4YzkwMzA1OTAyODc1MWYyZGYxOTFjZTE1ZGZkZmY2OSIsIndlYmRyaXZlciI6MCwibGFuZ3VhZ2UiOiJlbi1VUyIsImNvbG9yRGVwdGgiOjI0LCJkZXZpY2VNZW1vcnkiOjQsInBpeGVsUmF0aW8iOjIsImhhcmR3YXJlQ29uY3VycmVuY3kiOjgsInNjcmVlbldpZHRoIjozNjAsInNjcmVlbkhlaWdodCI6NjQwLCJhdmFpbGFibGVTY3JlZW5XaWR0aCI6MzYwLCJhdmFpbGFibGVTY3JlZW5IZWlnaHQiOjY0MCwidGltZXpvbmVPZmZzZXQiOi0zMDAsInRpbWV6b25lIjoiQW1lcmljYS9DaGljYWdvIiwic2Vzc2lvblN0b3JhZ2UiOjEsImxvY2FsU3RvcmFnZSI6MSwiaW5kZXhlZERiIjoxLCJhZGRCZWhhdmlvciI6MCwib3BlbkRhdGFiYXNlIjowLCJwbGF0Zm9ybSI6Ik1hY0ludGVsIiwicGx1Z2lucyI6IjI5Y2Y3MWUzZDgxZDc0ZDQzYTViMGViNzk0MDViYTg3IiwiY2FudmFzIjoiYzY4ODVlMTQxZmZhNWY4MDAxMTg2OWUyOTFiNzExZTciLCJhZEJsb2NrIjowLCJoYXNMaWVkTGFuZ3VhZ2VzIjowLCJoYXNMaWVkUmVzb2x1dGlvbiI6MCwiaGFzTGllZE9zIjowLCJoYXNMaWVkQnJvd3NlciI6MCwiZm9udHMiOiJjODdiMWIyN2Y0MWY4NmRlYzcyYzFkMmUwZGVmNzEyMCIsImF1ZGlvIjoiNTVmNjcxMjQ0MzRiMmRlNzEzMjIyNzlhZWYxNmUzNmIiLCJlbnVtZXJhdGVEZXZpY2VzIjoiNWYzZmRhZjQ3NDNlYWE3MDdjYTZiN2RhNjU2MDM4OTIifX0="</span><span class="brace">,</span>
+    <span class="key">"version"</span><span class="colon">:</span> <span class="string">"v4"</span><span class="brace">,</span>
+    <span class="key">"author"</span><span class="colon">:</span> <span class="string">"@OriginalAni"</span>
+<span class="brace">}</span>
+                </code></pre>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 id="additional-info">Additional Information</h2>
+                <p><strong>Author:</strong> @OriginalAni</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+<script>
+    let btn = document.querySelector('#btn')
+    let sidebar = document.querySelector('.sidebar')
+
+    btn.onclick = function () {
+        sidebar.classList.toggle('active');
+    };
+</script>
+<script src="js/script.js"></script>
+
+</html>
