@@ -1,9 +1,8 @@
-// src/db/connection.js
-
 const mongoose = require('mongoose');
+
 const connectDB = async () => {
     try {
-        await mongoose.connect('<MONGO URL>/SiteDB', {
+        await mongoose.connect('mongodb+srv://bruxo:mypassword123@bruxo.ztkst.mongodb.net/SiteDB?retryWrites=true&w=majority&appName=bruxo', {
             // useNewUrlParser: true,
             // useUnifiedTopology: true,
         });
