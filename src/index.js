@@ -2,7 +2,7 @@
 
 const express = require('express');
 const path = require('path');
-
+const connectDB = require('./db/connection.js');
 
 const setupRoutes = require('./server/routes'); // تأكد إنه بيرجع router
 
