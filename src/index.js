@@ -1,32 +1,42 @@
 // src/index.js
+
 const express = require('express');
 const path = require('path');
-const setupRoutes = require('../src/server/routes.js')
-const bodyParser = require('body-parser');
 
+const connectDB = require('./db/connection.js');
+const setupRoutes = require('./server/routes'); // تأكد إنه بيرجع router
 
 const app = express();
-const PORT = 3000;
-const connectDB = require('./db/connection.js');
-const User = require('./models/user.js');
-const mongoose = require('mongoose');
 
+// ✅ مهم جدًا لـ Heroku
+const PORT = process.env.PORT || 3000;
 
+// 🔹 Connect Database
 (async () => {
-    await connectDB();
+    try {
+        await connectDB();
+        console.log("Database connected");
+    } catch (err) {
+        console.error("DB connection error:", err);
+    }
 })();
 
-
-// app.use(express.json());
-// app.use(bodyParser.urlencoded({ extended: true }));
+// 🔹 Middlewares
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// 🔹 Static files
 app.use(express.static(path.join(__dirname, 'public')));
 
+// 🔹 Routes
+app.use('/', setupRoutes);
 
-// setupRoutes();
-// Setup routes
-app.use('/', setupRoutes());
+// 🔹 Test route (اختياري)
+app.get('/', (req, res) => {
+    res.send('API is running 🚀');
+});
 
+// 🔹 Start server
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+    console.log(`Server running on port ${PORT}`);
 });
